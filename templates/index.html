@@ -11,14 +11,10 @@
     </head>
     <body>
         <h1>Lydkontrolløren</h1>
-        <form>
-            <p>Last opp lydfilen for kontroll!</p>
-            <br>
-            <input type="file" id="Velg fil" name="Velg fil">
-            <br>
-            <button>Kjør kontroll</button>
-        </form>
-        
-        <script src="" async defer></script>
+            <form action="{{url_for('upload')}}" method="post" enctype="multipart/form-data">
+                <input type="file" name="upload" accept="wav/"/>
+                <input type="submit" />
+            </form>
+
     </body>
 </html>
